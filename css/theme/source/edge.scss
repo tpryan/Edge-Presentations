@@ -15,8 +15,8 @@
 
 @font-face {@include fontface (SourceSans, "fonts/sourcesanspro-extralight-webfont", 200, normal);}
 @font-face {@include fontface (SourceSans, "fonts/sourcesanspro-extralightit-webfont", 200, italic);}
-@font-face {@include fontface (SourceSansLight, "fonts/sourcesanspro-light-webfont", 300, normal);}
-@font-face {@include fontface (SourceSansLight, "fonts/sourcesanspro-lightit-webfont", 300, italic);}
+@font-face {@include fontface (SourceSans, "fonts/sourcesanspro-light-webfont", 300, normal);}
+@font-face {@include fontface (SourceSans, "fonts/sourcesanspro-lightit-webfont", 300, italic);}
 @font-face {@include fontface (SourceSans, "fonts/sourcesans-regular-webfont", 400, normal);}
 @font-face {@include fontface (SourceSans, "fonts/sourcesanspro-it-webfont", 400, italic);}
 @font-face {@include fontface (SourceSans, "fonts/sourcesanspro-semibold-webfont", 600, normal);}
@@ -111,7 +111,7 @@ $headingColor: #000;
 
 #twitter-call{
 	position: absolute;
-	bottom: 80px;
+	bottom: 10px;
 	width: 100%;
 	text-align: center;
 	font-size:25px;
