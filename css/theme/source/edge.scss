@@ -1,0 +1,144 @@
+/**
+ * Edge theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Terry Ryan, http://terrenceryan.com
+ */
+
+
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+@import "edge-mixins";
+// ---------------------------------------------
+
+@font-face {@include fontface (SourceSans, "fonts/sourcesanspro-extralight-webfont", 200, normal);}
+@font-face {@include fontface (SourceSans, "fonts/sourcesanspro-extralightit-webfont", 200, italic);}
+@font-face {@include fontface (SourceSansLight, "fonts/sourcesanspro-light-webfont", 300, normal);}
+@font-face {@include fontface (SourceSansLight, "fonts/sourcesanspro-lightit-webfont", 300, italic);}
+@font-face {@include fontface (SourceSans, "fonts/sourcesans-regular-webfont", 400, normal);}
+@font-face {@include fontface (SourceSans, "fonts/sourcesanspro-it-webfont", 400, italic);}
+@font-face {@include fontface (SourceSans, "fonts/sourcesanspro-semibold-webfont", 600, normal);}
+@font-face {@include fontface (SourceSans, "fonts/sourcesanspro-semiboldit-webfont", 600, italic);}
+@font-face {@include fontface (SourceSans, "fonts/sourcesanspro-bold-webfont", 700, normal);}
+@font-face {@include fontface (SourceSans, "fonts/sourcesanspro-boldit-webfont", 700, italic);}
+@font-face {@include fontface (SourceSans, "fonts/sourcesanspro-black-webfont", 900, normal);}
+@font-face {@include fontface (SourceSans, "fonts/sourcesanspro-blackit-webfont", 900, italic);}
+
+@font-face {@include fontface ('SourceCodePro', "fonts/sourcecodepro-regular-webfont", normal, normal);}
+
+// Override theme settings (see ../template/settings.scss)
+$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+
+// Background generator
+@mixin bodyBackground() {
+	@include multiple-radial-gradient();
+}
+
+$linkColor: #4166B5;
+$linkColorHover: #7398e7;
+
+$mainFont: "SourceSans", sans-serif;
+$mainWeight: 200;
+$mainColor: #000;
+
+$headingFont: "SourceSans", sans-serif;
+$headingWeight: 300;
+$headingStyle: normal;
+$headingColor: #000;
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+
+.reveal{
+	.heading{
+		margin: 0 0 20px 0;
+		color: $headingColor;
+		font-family: $headingFont;
+	    font-weight: $headingWeight;
+	    font-style: $headingStyle;
+		line-height: $headingLineHeight;
+		letter-spacing: $headingLetterSpacing;
+		text-transform: $headingTextTransform;
+		text-shadow: $headingTextShadow;
+	}
+	h1,h2,h3,h4,h5,h6{
+		@extend .heading;
+	}
+	h1 {
+		text-shadow: $heading1TextShadow;
+	}
+	.copy{
+		font-family: $mainFont;
+		font-size: $mainFontSize;
+		font-weight: $mainWeight;
+	}
+	p,li{
+		@extend .copy;
+	}
+
+	section {
+		.transparent{
+			border: none;
+			background: none;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+
+		}
+	}
+	.text-inspect{color: rgb(253,171,72);}
+	.text-pg{color: rgb(158,218,225);}
+	.text-brackets{color: #5A90FF;}
+	.text-code{color: rgb(82,222,198);}
+	.text-reflow{color: rgb(97,220,254);}
+	.text-wf{color: rgb(254,205,71);}
+	.text-dw{color: rgb(172,238,41);}
+	.text-cc{color: rgb(255,0,0);}
+	.text-an{color: #544696;}
+	.text-typekit{color: rgb(157,193,68);}
+
+}
+
+#twitter-call{
+	position: absolute;
+	bottom: 80px;
+	width: 100%;
+	text-align: center;
+	font-size:25px;
+	text-shadow: 2px 2px 2px #999;
+	line-height: 1;
+
+	p{
+		margin: 0;
+	}
+	img{
+		border: none;
+		vertical-align: middle;
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.adobelogo{
+	border: none;
+	position: fixed;
+	top: 0;
+	right: 100px;
+
+}
+
+
+
+
+
+
