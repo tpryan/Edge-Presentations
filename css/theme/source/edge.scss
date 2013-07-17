@@ -27,17 +27,18 @@
 @font-face {@include fontface (SourceSans, "fonts/sourcesanspro-blackit-webfont", 900, italic);}
 
 @font-face {@include fontface ('SourceCodePro', "fonts/sourcecodepro-regular-webfont", normal, normal);}
+@font-face {@include fontface ('SourceCodePro', "fonts/sourcecodepro-bold-webfont", bold, normal);}
 
 // Override theme settings (see ../template/settings.scss)
-$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+$heading1TextShadow: 0 1px 0 #172440, 0 2px 0 #2E487F, 0 3px 0 #4166B5, 0 4px 0 #5281E5, 0 5px 0 #5C90FF, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
 
 // Background generator
 @mixin bodyBackground() {
 	@include multiple-radial-gradient();
 }
 
-$linkColor: #4166B5;
-$linkColorHover: #7398e7;
+$linkColor: #B27C00;
+$linkColorHover: #FFB200;
 
 $mainFont: "SourceSans", sans-serif;
 $mainWeight: 200;
@@ -46,7 +47,8 @@ $mainColor: #000;
 $headingFont: "SourceSans", sans-serif;
 $headingWeight: 300;
 $headingStyle: normal;
-$headingColor: #000;
+$headingColor: #4166B5;
+$headingTextShadow: 2px 2px 3px #999;
 
 
 
@@ -107,6 +109,12 @@ $headingColor: #000;
 	.text-an{color: #544696;}
 	.text-typekit{color: rgb(157,193,68);}
 
+	.column{
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 25px;
+		margin-right: 25px;
+	}
 }
 
 #twitter-call{
@@ -115,7 +123,7 @@ $headingColor: #000;
 	width: 100%;
 	text-align: center;
 	font-size:25px;
-	text-shadow: 2px 2px 2px #999;
+	text-shadow: 2px 2px 3px #ccc;
 	line-height: 1;
 
 	p{
