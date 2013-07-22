@@ -254,7 +254,7 @@ body {
 .reveal .text-inspect {
   color: #fdab48; }
 .reveal .text-pg {
-  color: #9edae1; }
+  color: #003e51; }
 .reveal .text-brackets {
   color: #5A90FF; }
 .reveal .text-code {
@@ -271,6 +271,20 @@ body {
   color: #544696; }
 .reveal .text-typekit {
   color: #9dc144; }
+.reveal .text-android {
+  color: #97ac55; }
+.reveal .text-obj-c {
+  color: #51a0ff; }
+.reveal .text-bb {
+  color: #666666; }
+.reveal .text-ms-red {
+  color: red; }
+.reveal .text-ms-green {
+  color: green; }
+.reveal .text-ms-blue {
+  color: blue; }
+.reveal .text-ms-orange {
+  color: orange; }
 .reveal .column {
   display: inline-block;
   vertical-align: top;
