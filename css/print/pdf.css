@@ -11,15 +11,52 @@
    beyond the edge of the printed page, and prevents
    unnecessary background images from printing */
 
+
+@font-face {
+  font-family: 'Source San Pro';
+  src: url("../../lib/font/adobe/sourcesanspro-regular-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-regular-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-regular-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-regular-webfont.svg#SourceCodePro") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source San Pro';
+  src: url("../../lib/font/adobe/sourcesanspro-it-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-it-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-it-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-it-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-it-webfont.svg#SourceCodePro") format("svg");
+  font-weight: normal;
+  font-style: italid; }
+
+@font-face {
+  font-family: 'Source San Pro Black';
+  src: url("../../lib/font/adobe/sourcesanspro-black-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-black-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-black-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-black-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-black-webfont.svg#SourceCodeProBlack") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url("../../lib/font/adobe/sourcecodepro-regular-webfont.eot");
+  src: url("../../lib/font/adobe/sourcecodepro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcecodepro-regular-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcecodepro-regular-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcecodepro-regular-webfont.svg#SourceCodePro") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source San Pro';
+  src: url("../../lib/font/adobe/sourcesanspro-bold-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-bold-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-bold-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-bold-webfont.svg#SourceCodePro") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+
 * {
 	-webkit-print-color-adjust: exact;
 }
 
 body {
+	font-family: "Adobe Clean", "Source Sans Pro";
 	font-size: 18pt;
-	width: 297mm;
-	height: 229mm;
-	margin: 0 auto !important;
+	width: auto;
+	height: auto;
 	border: 0;
 	padding: 0;
 	float: none !important;
@@ -71,11 +108,6 @@ a:visited {
 	text-decoration: underline;
 }
 
-.reveal pre code {
-	overflow: hidden !important;
-	font-family: monospace !important;
-}
-
 
 /* SECTION 6: more reveal.js specific additions by @skypanther */
 ul, ol, div, p {
@@ -87,11 +119,6 @@ ul, ol, div, p {
 	overflow: visible;
 	margin: auto;
 }
-.reveal {
-	width: auto !important;
-	height: auto !important;
-	overflow: hidden !important;
-}
 .reveal .slides {
 	position: static;
 	width: 100%;
@@ -99,8 +126,10 @@ ul, ol, div, p {
 
 	left: auto;
 	top: auto;
-	margin: 0 !important;
-	padding: 0 !important;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	padding: auto;
 
 	overflow: visible;
 	display: block;
@@ -122,18 +151,18 @@ ul, ol, div, p {
 	page-break-after: always !important;
 
 	visibility: visible !important;
-	position: relative !important;
+	position: static !important;
 	width: 100% !important;
-	height: 229mm !important;
-	min-height: 229mm !important;
+	height: auto !important;
+	min-height: initial !important;
 	display: block !important;
-	overflow: hidden !important;
+	overflow: visible !important;
 
 	left: 0 !important;
 	top: 0 !important;
-	margin: 0 !important;
-	padding: 2cm 2cm 0 2cm !important;
-	box-sizing: border-box !important;
+	margin-left: 0px !important;
+	margin-top: 50px !important;
+	padding: 20px 0px !important;
 
 	opacity: 1 !important;
 
@@ -148,15 +177,9 @@ ul, ol, div, p {
 	        transform: none !important;
 }
 .reveal section.stack {
-	margin: 0 !important;
-	padding: 0 !important;
+	margin: 0px !important;
+	padding: 0px !important;
 	page-break-after: avoid !important;
-	height: auto !important;
-	min-height: auto !important;
-}
-.reveal .absolute-element {
-	margin-left: 2.2cm;
-	margin-top: 1.8cm;
 }
 .reveal section .fragment {
 	opacity: 1 !important;
@@ -167,17 +190,6 @@ ul, ol, div, p {
 	    -ms-transform: none !important;
 	        transform: none !important;
 }
-.reveal section .slide-background {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 0;
-}
-.reveal section>* {
-	position: relative;
-	z-index: 1;
-}
 .reveal img {
 	box-shadow: none;
 }
@@ -187,4 +199,12 @@ ul, ol, div, p {
 }
 .reveal small a {
 	font-size: 16pt !important;
+}
+
+.reveal .titleslide hgroup{
+	box-shadow: none;
+}
+
+.reveal .content-with-bg {
+	box-shadow: none;
 }

@@ -2,12 +2,47 @@
    by Rob Glazebrook of CSSnewbie.com
    Last Updated: June 4, 2008
 
-   Feel free (nay, compelled) to edit, append, and
+   Feel free (nay, compelled) to edit, append, and 
    manipulate this file as you see fit. */
+
+@font-face {
+  font-family: 'Source San Pro';
+  src: url("../../lib/font/adobe/sourcesanspro-regular-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-regular-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-regular-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-regular-webfont.svg#SourceCodePro") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source San Pro';
+  src: url("../../lib/font/adobe/sourcesanspro-it-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-it-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-it-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-it-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-it-webfont.svg#SourceCodePro") format("svg");
+  font-weight: normal;
+  font-style: italid; }
+
+@font-face {
+  font-family: 'Source San Pro Black';
+  src: url("../../lib/font/adobe/sourcesanspro-black-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-black-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-black-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-black-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-black-webfont.svg#SourceCodeProBlack") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url("../../lib/font/adobe/sourcecodepro-regular-webfont.eot");
+  src: url("../../lib/font/adobe/sourcecodepro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcecodepro-regular-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcecodepro-regular-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcecodepro-regular-webfont.svg#SourceCodePro") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source San Pro';
+  src: url("../../lib/font/adobe/sourcesanspro-bold-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-bold-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-bold-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-bold-webfont.svg#SourceCodePro") format("svg");
+  font-weight: bold;
+  font-style: normal; }
 
 
 /* SECTION 1: Set default width, margin, float, and
-   background. This prevents elements from extending
+   background. This prevents elements from extending 
    beyond the edge of the printed page, and prevents
    unnecessary background images from printing */
 body {
@@ -28,11 +63,11 @@ html {
 	overflow: visible;
 }
 
-/* SECTION 2: Remove any elements not needed in print.
+/* SECTION 2: Remove any elements not needed in print. 
    This would include navigation, ads, sidebars, etc. */
-.nestedarrow,
-.controls,
-.reveal .progress,
+.nestedarrow, 
+.controls, 
+.reveal .progress, 
 .reveal.overview,
 .fork-reveal,
 .share-reveal,
@@ -44,8 +79,8 @@ html {
    Consider using a serif font for readability. */
 body, p, td, li, div, a {
 	font-size: 16pt!important;
-	font-family: Georgia, "Times New Roman", Times, serif !important;
-	color: #000;
+	font-family: "Adobe Clean", "Source Sans Pro";
+	color: #000; 
 }
 
 /* SECTION 4: Set heading font face, sizes, and color.
@@ -55,7 +90,7 @@ h1,h2,h3,h4,h5,h6 {
 	color: #000!important;
 	height: auto;
 	line-height: normal;
-	font-family: Georgia, "Times New Roman", Times, serif !important;
+	font-family: "Adobe Clean", "Source San Pro Black";
 	text-shadow: 0 0 0 #000 !important;
 	text-align: left;
 	letter-spacing: normal;
@@ -71,14 +106,14 @@ h6 { font-size: 18pt !important; font-style: italic; }
 /* SECTION 5: Make hyperlinks more usable.
    Ensure links are underlined, and consider appending
    the URL to the end of the link for usability. */
-a:link,
+a:link, 
 a:visited {
 	color: #000 !important;
 	font-weight: bold;
 	text-decoration: underline;
 }
 /*
-.reveal a:link:after,
+.reveal a:link:after, 
 .reveal a:visited:after {
 	content: " (" attr(href) ") ";
 	color: #222 !important;
@@ -123,9 +158,9 @@ ul, ol, div, p {
 	    -ms-perspective-origin: 50% 50%;
 	        perspective-origin: 50% 50%;
 }
-.reveal .slides>section,
+.reveal .slides>section, 
 .reveal .slides>section>section {
-
+	
 	visibility: visible !important;
 	position: static !important;
 	width: 90% !important;
@@ -152,25 +187,33 @@ ul, ol, div, p {
 	        transform: none !important;
 }
 .reveal section {
-	page-break-after: always !important;
+	page-break-after: always !important; 
 	display: block !important;
 }
 .reveal section .fragment {
 	opacity: 1 !important;
 	visibility: visible !important;
-
+	
 	-webkit-transform: none !important;
 	   -moz-transform: none !important;
 	    -ms-transform: none !important;
 	        transform: none !important;
 }
 .reveal section:last-of-type {
-	page-break-after: avoid !important;
+	page-break-after: avoid !important; 
 }
 .reveal section img {
 	display: block;
 	margin: 15px 0px;
 	background: rgba(255,255,255,1);
 	border: 1px solid #666;
+	box-shadow: none;
+}
+
+.reveal .titleslide hgroup{
+	box-shadow: none;
+}
+
+.reveal .content-with-bg {
 	box-shadow: none;
 }
